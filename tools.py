@@ -160,7 +160,6 @@ class DrawTool(APITool):
         for i, img in enumerate(r["images"]):
             image = Image.open(io.BytesIO(base64.b64decode(img.split(",", 1)[0])))
             image.save(img_path + f"output_{i}.png")
-            image.show()
         return img_path
 
 
